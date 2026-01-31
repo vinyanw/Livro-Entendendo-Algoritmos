@@ -30,5 +30,5 @@ if st.checkbox("Mostrar todos os contatos"):
 
     import pandas as pd
     df = pd.read_sql_query("SELECT * FROM Cliente", conn)
-    st.dataframe(df)
+    st.dataframe(df) # Isso cria a tabela visual
     conn.close()
