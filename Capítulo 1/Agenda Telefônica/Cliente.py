@@ -1,6 +1,10 @@
 import sqlite3
+import os
 
-conexao = sqlite3.connect('agenda.db')
+diretorio_do_script = os.path.dirname(os.path.abspath(__file__))
+caminho_completo = os.path.join(diretorio_do_script, 'agenda.db')
+
+conexao = sqlite3.connect(caminho_completo)
 cursor = conexao.cursor()
 
 cursor.execute('''
